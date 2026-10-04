@@ -1,0 +1,96 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sentiment Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>😊 Sentiment Analyzer</h1>
+            <p>Analyze the emotion behind your text</p>
+        </div>
+
+        <div class="input-box">
+
+            <label for="textInput">Enter your text</label>
+
+            <textarea
+                id="textInput"
+                placeholder="Example: I really love this application!"
+            ></textarea>
+
+            <button onclick="analyzeSentiment()">
+                🔍 Analyze Sentiment
+            </button>
+
+            <button class="clear-btn" onclick="clearText()">
+                🗑️ Clear
+            </button>
+
+        </div>
+
+        <div id="result" class="result hidden">
+
+            <div class="emoji" id="emoji">😊</div>
+
+            <h2 id="sentiment">Positive</h2>
+
+            <p id="message">
+                Your text has a positive sentiment.
+            </p>
+
+            <div class="score-box">
+
+                <div class="score">
+                    <span>Positive</span>
+                    <strong id="positiveScore">0%</strong>
+                </div>
+
+                <div class="score">
+                    <span>Neutral</span>
+                    <strong id="neutralScore">0%</strong>
+                </div>
+
+                <div class="score">
+                    <span>Negative</span>
+                    <strong id="negativeScore">0%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="examples">
+
+            <h3>Try these examples</h3>
+
+            <button onclick="useExample('I love this product. It is amazing!')">
+                Positive Example
+            </button>
+
+            <button onclick="useExample('The product is okay and works normally.')">
+                Neutral Example
+            </button>
+
+            <button onclick="useExample('I hate this product. It is terrible.')">
+                Negative Example
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
